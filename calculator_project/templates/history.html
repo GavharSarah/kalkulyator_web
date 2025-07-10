@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>History</title>
+</head>
+<body>
+    <h1>Calculation History</h1>
+
+    {% if history %}
+        <ul>
+            {% for item in history %}
+                <li>{{ item }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No history yet.</p>
+    {% endif %}
+
+    <a href="{% url 'calculator' %}">Back to calculator</a>
+</body>
+</html>
